@@ -1,0 +1,647 @@
+{
+  "html": {
+    "title": "HTML Tutorial",
+    "description": "Learn HTML from basics to advanced.",
+    "lessons": [
+      {
+        "id": "intro",
+        "title": "HTML Introduction",
+        "content": "<h2>What is HTML?</h2><p>HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.</p><h3>Example</h3><pre>&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;body&gt;\n&lt;h1&gt;Hello World&lt;/h1&gt;\n&lt;/body&gt;\n&lt;/html&gt;</pre>",
+        "example": "<!DOCTYPE html>\n<html>\n<body>\n<h1>Hello World</h1>\n</body>\n</html>"
+      },
+      {
+        "id": "elements",
+        "title": "HTML Elements",
+        "content": "<h2>HTML Elements</h2><p>An HTML element is defined by a start tag, some content, and an end tag.</p><pre>&lt;tagname&gt;Content goes here...&lt;/tagname&gt;</pre>",
+        "example": "<h1>My First Heading</h1>\n<p>My first paragraph.</p>"
+      },
+      {
+        "id": "headings",
+        "title": "HTML Headings and Paragraphs",
+        "content": "<h2>Give your page a clear structure</h2><p>Headings describe the sections of a page. Use <code>&lt;h1&gt;</code> for the main heading, then <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> for nested sections. Paragraphs use the <code>&lt;p&gt;</code> element.</p><div class=\"lesson-callout\">Choose heading levels for meaning and structure, not just for their visual size.</div><h3>Try changing the heading levels</h3>",
+        "example": "<h1>My garden journal</h1>\n<p>Notes from the backyard.</p>\n<h2>Things growing now</h2>\n<p>Tomatoes, basil, and snap peas.</p>"
+      },
+      {
+        "id": "links-images",
+        "title": "HTML Links and Images",
+        "content": "<h2>Connect pages and add images</h2><p>Links use the <code>&lt;a&gt;</code> element with an <code>href</code> destination. Images use <code>&lt;img&gt;</code>; provide useful alternative text with the <code>alt</code> attribute.</p><h3>Make links descriptive</h3><p>Link text such as “Read the field notes” tells people where the link goes, even when read out of context.</p>",
+        "example": "<h1>Explore the coast</h1>\n<p><a href=\"https://example.com/\">Read the field notes</a></p>\n<img src=\"https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700\" alt=\"Waves breaking along the coast\" style=\"width:100%;max-width:420px\">"
+      },
+      {
+        "id": "lists",
+        "title": "HTML Lists",
+        "content": "<h2>Group related items</h2><p>Use <code>&lt;ul&gt;</code> for an unordered list and <code>&lt;ol&gt;</code> when the order matters. Put each item inside an <code>&lt;li&gt;</code> element.</p><h3>A checklist for a small project</h3>",
+        "example": "<h1>Weekend project</h1>\n<ol>\n  <li>Sketch an idea</li>\n  <li>Build the first version</li>\n  <li>Ask a friend to try it</li>\n</ol>\n<h2>Bring along</h2>\n<ul><li>Notebook</li><li>Pencils</li></ul>"
+      },
+      {
+        "id": "forms",
+        "title": "HTML Forms",
+        "content": "<h2>Collect information</h2><p>Forms group controls for entering data. A <code>&lt;label&gt;</code> should describe each input. Matching the label’s <code>for</code> value to the input’s <code>id</code> makes the form easier to use.</p><div class=\"lesson-callout\">This example is only the interface. Sending form data requires a server or another form handler.</div>",
+        "example": "<form>\n  <label for=\"email\">Email address</label>\n  <input id=\"email\" type=\"email\" placeholder=\"you@example.com\" required>\n  <button type=\"submit\">Join the list</button>\n</form>"
+      },
+      {
+        "id": "attributes",
+        "title": "HTML Attributes",
+        "content": "<h2>Add information to elements</h2><p>Attributes appear in an element's opening tag and provide extra information. They usually have a name and a value, such as <code>href</code> on a link or <code>alt</code> on an image.</p><h3>Boolean attributes</h3><p>Some attributes, such as <code>required</code> and <code>disabled</code>, work by being present on the element.</p>",
+        "example": "<label for=\"nickname\">Your nickname</label>\n<input id=\"nickname\" name=\"nickname\" type=\"text\" maxlength=\"20\" placeholder=\"Type a name\">\n<p><a href=\"https://example.com/\" target=\"_blank\" rel=\"noreferrer\">Open an example page</a></p>"
+      },
+      {
+        "id": "semantic-html",
+        "title": "Semantic HTML",
+        "content": "<h2>Describe the purpose of your content</h2><p>Semantic elements communicate what a region is for. Use <code>&lt;header&gt;</code> for introductory content, <code>&lt;nav&gt;</code> for navigation, <code>&lt;main&gt;</code> for the page's primary content, and <code>&lt;footer&gt;</code> for related closing information.</p><div class=\"lesson-callout\">Semantic structure helps browsers, assistive technology, and other developers understand a page.</div>",
+        "example": "<header><h1>Trail notes</h1></header>\n<nav><a href=\"#route\">Today's route</a></nav>\n<main id=\"route\">\n  <article>\n    <h2>By the river</h2>\n    <p>A quiet two-mile walk beneath the trees.</p>\n  </article>\n</main>\n<footer><p>Written outdoors.</p></footer>"
+      },
+      {
+        "id": "tables",
+        "title": "HTML Tables",
+        "content": "<h2>Present data in rows and columns</h2><p>Tables are for data with meaningful row and column relationships, not for page layout. Use <code>&lt;th&gt;</code> for headings and <code>&lt;caption&gt;</code> to describe the table.</p>",
+        "example": "<table border=\"1\" cellpadding=\"8\">\n  <caption>Garden harvest</caption>\n  <thead><tr><th scope=\"col\">Month</th><th scope=\"col\">Tomatoes</th></tr></thead>\n  <tbody>\n    <tr><th scope=\"row\">July</th><td>8</td></tr>\n    <tr><th scope=\"row\">August</th><td>14</td></tr>\n  </tbody>\n</table>"
+      },
+      {
+        "id": "media",
+        "title": "HTML Audio and Video",
+        "content": "<h2>Add media with native controls</h2><p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements let browsers play media. Add the <code>controls</code> attribute to give visitors playback controls and provide fallback text for unsupported formats.</p>",
+        "example": "<h1>Media on the web</h1>\n<audio controls>\n  <source src=\"sample.mp3\" type=\"audio/mpeg\">\n  Your browser does not support audio.\n</audio>\n<video controls width=\"360\">\n  <source src=\"sample.mp4\" type=\"video/mp4\">\n  Your browser does not support video.\n</video>"
+      },
+      {
+        "id": "accessible-html",
+        "title": "Accessible HTML Basics",
+        "content": "<h2>Make pages work for more people</h2><p>Start with native HTML: use buttons for actions, links for navigation, labels for inputs, and headings in a logical order. Give informative images useful alternative text and make sure controls can be reached with a keyboard.</p><h3>Check your page</h3><p>Try navigating with the Tab key and check that each control has a clear accessible name.</p>",
+        "example": "<main>\n  <h1>Choose a reminder</h1>\n  <label for=\"reminder\">Reminder time</label>\n  <select id=\"reminder\">\n    <option>Morning</option>\n    <option>Afternoon</option>\n  </select>\n  <button type=\"button\">Save reminder</button>\n</main>"
+      },
+      {
+        "id": "forms-validation",
+        "title": "HTML Form Validation",
+        "content": "<h2>Guide the user before submission</h2><p>HTML can validate common field requirements with attributes such as <code>required</code>, <code>minlength</code>, <code>type</code>, and <code>pattern</code>. This gives immediate feedback and reduces avoidable errors.</p>",
+        "example": "<form>\n  <label for=\"password\">Password</label>\n  <input id=\"password\" type=\"password\" minlength=\"8\" required>\n  <button type=\"submit\">Create account</button>\n</form>"
+      },
+      {
+        "id": "semantic-seo",
+        "title": "Semantic HTML and SEO",
+        "content": "<h2>Structure content for humans and search engines</h2><p>Semantic markup gives web pages meaning and clarity. Labels, headings, and descriptive link text help both users and search engines understand the purpose of each section.</p>",
+        "example": "<article>\n  <h1>Spring planting guide</h1>\n  <p>Learn which vegetables grow best in cool weather.</p>\n</article>"
+      }
+    ]
+  },
+  "css": {
+    "title": "CSS Tutorial",
+    "description": "Style your web pages with CSS.",
+    "lessons": [
+      {
+        "id": "intro",
+        "title": "CSS Introduction",
+        "content": "<h2>What is CSS?</h2><p>CSS stands for Cascading Style Sheets. It describes how HTML elements are displayed.</p>",
+        "example": "<style>\nbody { background-color: lightblue; }\nh1 { color: navy; }\n</style>\n<h1>Hello CSS</h1>"
+      },
+      {
+        "id": "selectors",
+        "title": "CSS Selectors",
+        "content": "<h2>Choose which elements to style</h2><p>A type selector targets every element of a kind. A class selector starts with a dot and can be reused. An ID selector starts with a hash and should identify one unique element.</p><h3>Try the class selector</h3>",
+        "example": "<style>\n.note { color: #087f5b; font-weight: bold; }\n#page-title { font-family: Georgia, serif; }\n</style>\n<h1 id=\"page-title\">Field notes</h1>\n<p class=\"note\">The first seeds are in.</p>\n<p>Next: water the seedlings.</p>"
+      },
+      {
+        "id": "colors-and-text",
+        "title": "CSS Colors and Text",
+        "content": "<h2>Set a visual tone</h2><p>CSS can set text color, background color, font size, line height, and alignment. Hex values such as <code>#087f5b</code> give precise colors; named colors are handy for quick experiments.</p><h3>Keep text comfortable to read</h3><p>Pair a readable font size with enough line height and contrast against the background.</p>",
+        "example": "<style>\nbody { background: #f2f7f3; color: #17221f; font-family: Georgia, serif; }\nh1 { color: #087f5b; font-size: 2.5rem; }\np { max-width: 34rem; line-height: 1.7; }\n</style>\n<h1>A little color</h1>\n<p>Thoughtful type and contrast make a page easier to read.</p>"
+      },
+      {
+        "id": "box-model",
+        "title": "The CSS Box Model",
+        "content": "<h2>Every element is a box</h2><p>The box model is made of content, padding, border, and margin. Padding adds space inside the border; margin adds space outside it. <code>box-sizing: border-box</code> makes declared widths include padding and border.</p>",
+        "example": "<style>\n* { box-sizing: border-box; }\n.card { width: 260px; padding: 20px; border: 2px solid #087f5b; margin: 24px; }\n</style>\n<div class=\"card\"><h2>A tidy box</h2><p>Padding is inside. Margin is outside.</p></div>"
+      },
+      {
+        "id": "flexbox",
+        "title": "CSS Flexbox",
+        "content": "<h2>Arrange items in a row or column</h2><p>Set <code>display: flex</code> on a container to arrange its children. Use <code>gap</code> for consistent spacing, <code>justify-content</code> along the main axis, and <code>align-items</code> across it.</p>",
+        "example": "<style>\n.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; background: #e3f4ec; }\n.item { padding: 12px; background: white; border-radius: 4px; }\n</style>\n<div class=\"row\"><span class=\"item\">Plan</span><span class=\"item\">Build</span><span class=\"item\">Share</span></div>"
+      },
+      {
+        "id": "grid",
+        "title": "CSS Grid",
+        "content": "<h2>Build two-dimensional layouts</h2><p>CSS Grid arranges content in rows and columns. Define columns with <code>grid-template-columns</code> and use <code>gap</code> to space items consistently.</p><h3>Flexible columns</h3><p>The <code>minmax()</code> function sets a minimum and maximum track size; <code>auto-fit</code> lets columns wrap when space is limited.</p>",
+        "example": "<style>\n.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }\n.tile { min-height: 90px; display: grid; place-items: center; background: #e3f4ec; color: #075d44; }\n</style>\n<div class=\"gallery\"><div class=\"tile\">One</div><div class=\"tile\">Two</div><div class=\"tile\">Three</div></div>"
+      },
+      {
+        "id": "responsive-design",
+        "title": "Responsive CSS",
+        "content": "<h2>Adapt layouts to available space</h2><p>Responsive layouts use flexible widths and media queries to keep content usable on different screens. Start with a layout that works in a narrow column, then add a breakpoint when the content needs more room.</p><div class=\"lesson-callout\">Resize the preview to see the card switch from one column to two.</div>",
+        "example": "<style>\n.cards { display: grid; grid-template-columns: 1fr; gap: 12px; }\n.card { padding: 18px; background: #f0f6f1; }\n@media (min-width: 560px) { .cards { grid-template-columns: repeat(2, 1fr); } }\n</style>\n<div class=\"cards\"><article class=\"card\">A smaller screen</article><article class=\"card\">A wider screen</article></div>"
+      },
+      {
+        "id": "pseudo-classes",
+        "title": "CSS Pseudo-classes",
+        "content": "<h2>Style an element in a particular state</h2><p>Pseudo-classes such as <code>:hover</code>, <code>:focus-visible</code>, and <code>:first-child</code> select elements based on how they are being used or where they appear.</p><h3>Keep keyboard focus visible</h3><p>A visible focus style helps people who navigate with a keyboard see where they are on the page.</p>",
+        "example": "<style>\na { color: #075d44; padding: 8px; }\na:hover { background: #e3f4ec; }\na:focus-visible { outline: 3px solid #e77a63; }\nli:first-child { font-weight: bold; }\n</style>\n<a href=\"#details\">Read the details</a>\n<ul><li>First item</li><li>Second item</li></ul>"
+      },
+      {
+        "id": "custom-properties",
+        "title": "CSS Custom Properties",
+        "content": "<h2>Reuse values with CSS variables</h2><p>Custom properties are declared with names that start with <code>--</code> and read with <code>var()</code>. Declare shared values on <code>:root</code> so they are available throughout the document.</p>",
+        "example": "<style>\n:root { --leaf: #087f5b; --space: 16px; }\nbutton { padding: var(--space); border: 0; background: var(--leaf); color: white; }\np { border-left: 4px solid var(--leaf); padding: var(--space); }\n</style>\n<button type=\"button\">A reusable color</button>\n<p>Update the variable once to change both elements.</p>"
+      },
+      {
+        "id": "positioning",
+        "title": "CSS Positioning",
+        "content": "<h2>Control where elements sit</h2><p>Static positioning follows normal document flow. Relative positioning adjusts an element from its normal spot. Absolute positioning uses a positioned ancestor as its reference, while fixed positioning stays attached to the viewport.</p>",
+        "example": "<style>\n.frame { position: relative; height: 150px; padding: 16px; background: #f0f6f1; }\n.tag { position: absolute; top: 12px; right: 12px; padding: 6px 9px; background: #087f5b; color: white; }\n</style>\n<div class=\"frame\"><span class=\"tag\">NEW</span><h2>Positioned in the frame</h2></div>"
+      },
+      {
+        "id": "transitions",
+        "title": "CSS Transitions",
+        "content": "<h2>Make state changes feel clear</h2><p>A transition interpolates a CSS property when its value changes. Specify the property and duration, then define the changed value in a state such as <code>:hover</code> or <code>:focus-visible</code>.</p><div class=\"lesson-callout\">Motion should support feedback. Keep an immediate focus indicator for keyboard users.</div>",
+        "example": "<style>\nbutton { padding: 12px 18px; border: 0; background: #087f5b; color: white; transition: background-color .2s ease, transform .2s ease; }\nbutton:hover { background: #075d44; transform: translateY(-2px); }\nbutton:focus-visible { outline: 3px solid #e77a63; outline-offset: 3px; }\n</style>\n<button type=\"button\">Hover or focus me</button>"
+      },
+      {
+        "id": "animations",
+        "title": "CSS Animations",
+        "content": "<h2>Add motion to a design</h2><p>Animations use keyframes to control how styles change over time. They are useful for drawing attention to a state change, guiding a user, or creating a more polished interface.</p>",
+        "example": "<style>\n@keyframes pulse {\n  0% { transform: scale(1); opacity: 0.9; }\n  50% { transform: scale(1.08); opacity: 1; }\n  100% { transform: scale(1); opacity: 0.9; }\n}\n.badge { display: inline-block; padding: 8px 14px; background: #0b5d5a; color: #fff; border-radius: 999px; animation: pulse 2s infinite; }\n</style>\n<span class=\"badge\">New lesson</span>"
+      },
+      {
+        "id": "dark-mode",
+        "title": "Designing for Dark Mode",
+        "content": "<h2>Support different visual preferences</h2><p>Dark mode helps some users reduce eye strain and can feel more comfortable in low-light environments. You can create a theme by defining colors that work well together and contrast clearly.</p>",
+        "example": "<style>\nbody { background: #111827; color: #f9fafb; font-family: sans-serif; }\n.card { background: #1f2937; padding: 18px; border-radius: 10px; }\n</style>\n<div class=\"card\"><h2>Evening view</h2><p>Dark mode can improve comfort for long reading sessions.</p></div>"
+      }
+    ]
+  },
+  "javascript": {
+    "title": "JavaScript Tutorial",
+    "description": "Make your pages interactive with JS.",
+    "lessons": [
+      {
+        "id": "intro",
+        "title": "JavaScript Introduction",
+        "content": "<h2>What is JavaScript?</h2><p>JavaScript is the programming language of the web.</p>",
+        "example": "<h1 id='demo'>Hello</h1>\n<script>\ndocument.getElementById('demo').innerHTML = 'Hello JavaScript!';\n</script>"
+      },
+      {
+        "id": "variables",
+        "title": "JavaScript Variables",
+        "content": "<h2>Store values with variables</h2><p>Use <code>const</code> for a value that will not be reassigned and <code>let</code> when it needs to change. Strings hold text, numbers hold numeric values, and booleans are either <code>true</code> or <code>false</code>.</p>",
+        "example": "<p id=\"message\"></p>\n<script>\nconst place = 'garden';\nlet seedlings = 3;\nseedlings = seedlings + 1;\ndocument.getElementById('message').textContent = `There are ${seedlings} seedlings in the ${place}.`;\n</script>"
+      },
+      {
+        "id": "functions",
+        "title": "JavaScript Functions",
+        "content": "<h2>Reuse a set of instructions</h2><p>A function groups work under a name. Parameters are inputs, and <code>return</code> sends a result back to the caller. Call the function whenever you need that result.</p>",
+        "example": "<p id=\"result\"></p>\n<script>\nfunction makeGreeting(name) {\n  return `Hello, ${name}!`;\n}\ndocument.getElementById('result').textContent = makeGreeting('Sam');\n</script>"
+      },
+      {
+        "id": "events",
+        "title": "JavaScript Events",
+        "content": "<h2>Respond to a user's action</h2><p>Events let a page respond to actions such as a click. Use <code>addEventListener</code> to connect an event to a function, keeping behavior separate from your HTML.</p>",
+        "example": "<button id=\"hello-button\" type=\"button\">Say hello</button>\n<p id=\"message\">Click the button.</p>\n<script>\ndocument.getElementById('hello-button').addEventListener('click', () => {\n  document.getElementById('message').textContent = 'Hello from JavaScript!';\n});\n</script>"
+      },
+      {
+        "id": "conditions",
+        "title": "JavaScript Conditions",
+        "content": "<h2>Choose what your code does</h2><p>An <code>if</code> statement runs a block when its condition is true. Add <code>else</code> for the alternative path. Comparison operators such as <code>===</code> check whether two values are equal.</p>",
+        "example": "<label for=\"temperature\">Temperature</label>\n<input id=\"temperature\" type=\"number\" value=\"18\">\n<button id=\"check\" type=\"button\">Check weather</button>\n<p id=\"advice\"></p>\n<script>\ndocument.getElementById('check').addEventListener('click', () => {\n  const temperature = Number(document.getElementById('temperature').value);\n  document.getElementById('advice').textContent = temperature < 15 ? 'Bring a jacket.' : 'Enjoy the day.';\n});\n</script>"
+      },
+      {
+        "id": "arrays",
+        "title": "JavaScript Arrays",
+        "content": "<h2>Keep a collection of values</h2><p>An array stores an ordered list. Items use zero-based indexes, and the <code>length</code> property tells you how many items it contains. Methods such as <code>push()</code> add an item to the end.</p>",
+        "example": "<p id=\"list\"></p>\n<button id=\"add\" type=\"button\">Add a fruit</button>\n<script>\nconst fruits = ['Pear', 'Plum'];\nfunction showFruits() {\n  document.getElementById('list').textContent = fruits.join(', ');\n}\ndocument.getElementById('add').addEventListener('click', () => {\n  fruits.push('Peach');\n  showFruits();\n});\nshowFruits();\n</script>"
+      },
+      {
+        "id": "loops",
+        "title": "JavaScript Loops",
+        "content": "<h2>Repeat work for each item</h2><p>A <code>for...of</code> loop visits each value in an iterable such as an array. Use it when you want to perform the same task for every item.</p>",
+        "example": "<ul id=\"tasks\"></ul>\n<script>\nconst tasks = ['Sketch', 'Build', 'Test'];\nconst list = document.getElementById('tasks');\nfor (const task of tasks) {\n  const item = document.createElement('li');\n  item.textContent = task;\n  list.append(item);\n}\n</script>"
+      },
+      {
+        "id": "objects",
+        "title": "JavaScript Objects",
+        "content": "<h2>Describe one thing with related values</h2><p>Objects store named properties. Use dot notation when you know the property name, and bracket notation when the name is stored in a variable.</p>",
+        "example": "<h1 id=\"name\"></h1>\n<p id=\"details\"></p>\n<script>\nconst book = { title: 'The Secret Garden', author: 'Frances Hodgson Burnett', pages: 331 };\ndocument.getElementById('name').textContent = book.title;\ndocument.getElementById('details').textContent = `${book.author} · ${book.pages} pages`;\n</script>"
+      },
+      {
+        "id": "dom",
+        "title": "Working with the DOM",
+        "content": "<h2>Update a page with JavaScript</h2><p>The Document Object Model (DOM) represents a page as objects that scripts can read and change. Select elements with methods such as <code>querySelector()</code>, then update text, attributes, or classes.</p><div class=\"lesson-callout\">For text from users or other untrusted sources, prefer <code>textContent</code> over <code>innerHTML</code>.</div>",
+        "example": "<p class=\"status\">Not started</p>\n<button type=\"button\" id=\"start\">Start</button>\n<script>\nconst status = document.querySelector('.status');\ndocument.querySelector('#start').addEventListener('click', () => {\n  status.textContent = 'You started the page!';\n  status.style.color = '#087f5b';\n});\n</script>"
+      },
+      {
+        "id": "form-events",
+        "title": "JavaScript Form Events",
+        "content": "<h2>Handle form input</h2><p>Listen for the form's <code>submit</code> event to respond when someone submits it. Call <code>preventDefault()</code> when you want to handle the action in the page instead of navigating away.</p>",
+        "example": "<form id=\"greeting-form\">\n  <label for=\"visitor\">Your name</label>\n  <input id=\"visitor\" required>\n  <button>Greet me</button>\n</form>\n<p id=\"greeting\"></p>\n<script>\ndocument.getElementById('greeting-form').addEventListener('submit', event => {\n  event.preventDefault();\n  const name = document.getElementById('visitor').value;\n  document.getElementById('greeting').textContent = `Welcome, ${name}!`;\n});\n</script>"
+      },
+      {
+        "id": "async",
+        "title": "JavaScript Async Basics",
+        "content": "<h2>Handle time-based work</h2><p>Some actions take time, such as fetching data or waiting for a timer. Promises and <code>async/await</code> help you write asynchronous code that is easier to follow.</p>",
+        "example": "<script>\nasync function loadMessage() {\n  return 'Data loaded';\n}\nloadMessage().then(message => console.log(message));\n</script>"
+      },
+      {
+        "id": "error-handling",
+        "title": "Handling Errors in JavaScript",
+        "content": "<h2>Expect the unexpected</h2><p>Real code can fail. Use <code>try</code> and <code>catch</code> blocks to handle mistakes gracefully and keep the page usable even when something goes wrong.</p>",
+        "example": "<script>\ntry {\n  const result = JSON.parse('{bad json}');\n  console.log(result);\n} catch (error) {\n  console.error('Could not parse the data.');\n}\n</script>"
+      }
+    ]
+  },
+  "accessibility": {
+    "title": "Web Accessibility",
+    "description": "Build pages that are usable for everyone.",
+    "lessons": [
+      {
+        "id": "why-accessibility",
+        "title": "Why Accessibility Matters",
+        "content": "<h2>Design for more people</h2><p>Accessible websites work better for everyone, not just people who use assistive technology. Clear structure, readable text, and sensible interactions make a page easier for all visitors to use.</p><div class=\"lesson-callout\">Accessibility is a design quality, not a bonus feature.</div>",
+        "example": "<main>\n  <h1>Community notice board</h1>\n  <p>Friendly, clear information helps every visitor find what they need quickly.</p>\n</main>"
+      },
+      {
+        "id": "landmarks",
+        "title": "Page Landmarks",
+        "content": "<h2>Use semantic regions</h2><p>Landmarks help assistive technology understand where the header, navigation, main content, and footer live. Use <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to make the page structure clear.</p>",
+        "example": "<header><h1>School garden</h1></header>\n<nav><a href=\"#plan\">Plan</a></nav>\n<main id=\"plan\"><p>Planting schedule for the next week.</p></main>\n<footer><p>Updated each Monday.</p></footer>"
+      },
+      {
+        "id": "keyboard",
+        "title": "Keyboard-Friendly Controls",
+        "content": "<h2>Support the keyboard users</h2><p>People may navigate by pressing Tab, Enter, and Space instead of using a mouse. Ensure links, buttons, and form fields have clear focus states and can be reached in a logical order.</p><h3>Quick check</h3><p>Press Tab across the page and notice whether each interactive element is easy to identify.</p>",
+        "example": "<button type=\"button\">Save draft</button>\n<a href=\"#notes\">View notes</a>\n<input type=\"text\" placeholder=\"Search the page\">"
+      },
+      {
+        "id": "contrast",
+        "title": "Color and Contrast",
+        "content": "<h2>Make text easy to read</h2><p>Strong contrast between text and background improves readability. Avoid low-contrast combinations such as pale gray text on a white background, and test your colors with accessibility tools or browser contrast checks.</p>",
+        "example": "<style>\nbody { background: #f6f7f8; color: #17212b; }\n.button { display: inline-block; background: #0b5d5a; color: #fff; padding: 10px 16px; border-radius: 6px; }\n</style>\n<p>Clear contrast helps everyone read the content.</p>\n<span class=\"button\">Join the event</span>"
+      },
+      {
+        "id": "forms",
+        "title": "Accessible Forms",
+        "content": "<h2>Label every form control</h2><p>Every input should have a visible label and an associated <code>for</code> value. Use helpful placeholders only as extras, not as the only instruction. Error messages should clearly explain what to fix.</p>",
+        "example": "<form>\n  <label for=\"name\">Full name</label>\n  <input id=\"name\" type=\"text\" required>\n  <button type=\"submit\">Submit</button>\n</form>"
+      },
+      {
+        "id": "focus-visible",
+        "title": "Focus States and Keyboard Navigation",
+        "content": "<h2>Make interactive elements obvious</h2><p>Keyboard users rely on visible focus styles to understand where they are on the page. A clear focus indicator, sensible tab order, and focusable controls make navigation much smoother.</p>",
+        "example": "<style>\na:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #0b5d5a; outline-offset: 3px; }\n</style>\n<a href=\"#learn\">Read more</a>\n<button type=\"button\">Continue</button>"
+      },
+      {
+        "id": "screen-reader",
+        "title": "Screen Reader Basics",
+        "content": "<h2>Write content that is understandable when read aloud</h2><p>Screen readers announce headings, buttons, form labels, and links in a predictable way. Use concise wording, descriptive labels, and meaningful structure to support people who rely on assistive technology.</p>",
+        "example": "<button aria-label=\"Save project draft\">Save</button>\n<h2>Project notes</h2>\n<p>Review the latest draft before publishing.</p>"
+      }
+    ]
+  },
+  "git": {
+    "title": "Git and GitHub",
+    "description": "Track changes, collaborate, and manage projects with confidence.",
+    "lessons": [
+      {
+        "id": "intro",
+        "title": "Git Introduction",
+        "content": "<h2>What is Git?</h2><p>Git helps you save snapshots of your project as it changes. It keeps a history of work, lets you compare versions, and makes team collaboration much easier.</p><div class=\"lesson-callout\">A repository is a project folder with version history attached.</div>",
+        "example": "<pre>git init\ngit status\ngit add .\ngit commit -m \"Initial commit\"</pre>"
+      },
+      {
+        "id": "commit",
+        "title": "Making a Commit",
+        "content": "<h2>Save a meaningful checkpoint</h2><p>A commit records the current state of your files. Write a short message that explains what changed so future you and your teammates can understand the project history.</p>",
+        "example": "<pre>git add index.html\ngit commit -m \"Add homepage layout\"</pre>"
+      },
+      {
+        "id": "branching",
+        "title": "Branching Basics",
+        "content": "<h2>Work on ideas separately</h2><p>Branches let you try new changes without disturbing the main project. This is useful for experiments, bug fixes, and feature work that need their own timeline.</p>",
+        "example": "<pre>git checkout -b feature/contact-form\n# make changes\ngit checkout main</pre>"
+      },
+      {
+        "id": "merge",
+        "title": "Merging Changes",
+        "content": "<h2>Combine work together</h2><p>When a feature is ready, you merge the branch back into the main branch. This brings the finished changes into the active project while keeping the update history visible.</p>",
+        "example": "<pre>git checkout main\ngit merge feature/contact-form</pre>"
+      },
+      {
+        "id": "github",
+        "title": "Using GitHub",
+        "content": "<h2>Share and collaborate</h2><p>GitHub hosts repositories online and makes it easier to review code, discuss changes, and contribute to projects with others. Pull requests are a common way to propose updates.</p>",
+        "example": "<pre>git remote add origin https://github.com/you/project.git\ngit push -u origin main</pre>"
+      },
+      {
+        "id": "pull-requests",
+        "title": "Pull Requests",
+        "content": "<h2>Review work before merging</h2><p>A pull request is a proposal to merge changes from one branch into another. It makes it easier to discuss updates, review code, and catch issues before the change is accepted.</p>",
+        "example": "<pre>git checkout feature/contact-form\ngit push origin feature/contact-form\n# open pull request on GitHub</pre>"
+      },
+      {
+        "id": "resolve-conflicts",
+        "title": "Resolving Merge Conflicts",
+        "content": "<h2>Fix overlapping changes carefully</h2><p>Merge conflicts happen when two people edit the same part of a file. Read both versions, decide which content should remain, and then save a final version that combines the right changes.</p>",
+        "example": "<pre>git checkout main\ngit merge feature/contact-form\n# fix conflict markers in files\ngit add .\ngit commit</pre>"
+      }
+    ]
+  },
+  "apis": {
+    "title": "APIs and JSON",
+    "description": "Learn how data moves between apps and websites.",
+    "lessons": [
+      {
+        "id": "what-is-api",
+        "title": "What is an API?",
+        "content": "<h2>Connect programs together</h2><p>An API is a way for one application to request information or actions from another. On the web, APIs often send data as JSON, which is a lightweight format for structured information.</p>",
+        "example": "<pre>{\n  \"name\": \"Maya\",\n  \"course\": \"Web Development\"\n}</pre>"
+      },
+      {
+        "id": "fetch",
+        "title": "Fetching Data",
+        "content": "<h2>Ask for data from a server</h2><p>The <code>fetch()</code> function lets JavaScript request data from a URL. It returns a Promise, which you can use to handle success and error cases.</p>",
+        "example": "<script>\nfetch('https://api.example.com/users')\n  .then(response => response.json())\n  .then(data => console.log(data));\n</script>"
+      },
+      {
+        "id": "json",
+        "title": "Working with JSON",
+        "content": "<h2>Read structured data</h2><p>JSON stores data as key-value pairs inside objects and arrays. It is easy to parse in JavaScript and perfect for sending information between a front-end app and a backend service.</p>",
+        "example": "<script>\nconst student = { name: 'Ava', enrolled: true, lessons: ['HTML', 'CSS'] };\nconsole.log(student.lessons[0]);\n</script>"
+      },
+      {
+        "id": "status-codes",
+        "title": "HTTP Status Codes",
+        "content": "<h2>Know if a request worked</h2><p>Status codes tell you whether a server understood your request. A <code>200</code> means success, while <code>404</code> means the resource was not found and <code>500</code> means the server failed.</p>",
+        "example": "<pre>200 OK\n404 Not Found\n500 Internal Server Error</pre>"
+      },
+      {
+        "id": "errors",
+        "title": "Handling API Errors",
+        "content": "<h2>Prepare for problems</h2><p>Network errors, invalid responses, and server outages happen. Check the response status and show a safe fallback message so users still know what is happening.</p>",
+        "example": "<script>\nfetch('/api/profile')\n  .then(response => {\n    if (!response.ok) throw new Error('Profile unavailable');\n    return response.json();\n  })\n  .catch(error => console.error(error.message));\n</script>"
+      },
+      {
+        "id": "crud",
+        "title": "CRUD Basics",
+        "content": "<h2>Manage create, read, update, and delete actions</h2><p>Most APIs support CRUD operations. These are the basic actions used to create records, read them, update existing values, and delete them when they are no longer needed.</p>",
+        "example": "<pre>GET /users\nPOST /users\nPUT /users/1\nDELETE /users/1</pre>"
+      },
+      {
+        "id": "auth",
+        "title": "API Authentication",
+        "content": "<h2>Protect data and requests</h2><p>Some APIs require authentication so only authorized users can read or change certain data. Common methods include API keys, tokens, and OAuth flows that verify identity before access is granted.</p>",
+        "example": "<pre>Authorization: Bearer your-token-here</pre>"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Beginner Project Track",
+    "description": "Build small web projects from idea to launch.",
+    "lessons": [
+      {
+        "id": "idea",
+        "title": "Start with a Simple Idea",
+        "content": "<h2>Choose a focused project</h2><p>Small projects work best when they solve one clear problem. A simple task, such as a to-do list or a personal landing page, is easier to finish and learn from.</p>",
+        "example": "<h1>Project goal</h1>\n<p>Create a page that lets a user add and remove tasks.</p>"
+      },
+      {
+        "id": "wireframe",
+        "title": "Plan the Layout",
+        "content": "<h2>Sketch before building</h2><p>Outline the page structure first: header, main content, controls, and footer. A quick wireframe helps you decide what content needs to exist before writing code.</p>",
+        "example": "<div>\n  <h2>Header</h2>\n  <input placeholder=\"Add a task\">\n  <button>Add</button>\n  <ul><li>Task one</li></ul>\n</div>"
+      },
+      {
+        "id": "build",
+        "title": "Build the First Version",
+        "content": "<h2>Turn the plan into code</h2><p>Start with the basic HTML structure, add CSS for layout and color, then use JavaScript to make elements interactive. Aim for a working version before polishing details.</p>",
+        "example": "<form>\n  <input type=\"text\" placeholder=\"New task\">\n  <button>Add</button>\n</form>"
+      },
+      {
+        "id": "test",
+        "title": "Test and Improve",
+        "content": "<h2>Check the experience</h2><p>Open the page in a browser and test each interaction. Try the happy path, then look for edge cases such as empty inputs, confusing labels, or missing feedback.</p>",
+        "example": "<p>Click the button with an empty field and check whether the page shows a helpful message.</p>"
+      },
+      {
+        "id": "launch",
+        "title": "Share the Project",
+        "content": "<h2>Publish and learn</h2><p>When the project works, share it with friends, family, or classmates. Each project teaches a new pattern and gives you something to talk about in your portfolio or resume.</p>",
+        "example": "<h1>Live project</h1>\n<p>Published on GitHub Pages or another free hosting service.</p>"
+      }
+    ]
+  },
+  "roadmap": {
+    "title": "Beginner Frontend Roadmap",
+    "description": "A step-by-step path from HTML basics to building and publishing your first project.",
+    "lessons": [
+      {
+        "id": "start-html",
+        "title": "1. Learn HTML Foundations",
+        "content": "<h2>Structure the page</h2><p>Start by learning how HTML gives meaning to each part of a webpage. Understand headings, paragraphs, links, images, lists, and form controls before moving on to styling and interaction.</p>",
+        "example": "<main>\n  <h1>Welcome</h1>\n  <p>My first webpage is taking shape.</p>\n  <a href=\"#next\">Learn more</a>\n</main>"
+      },
+      {
+        "id": "css-layout",
+        "title": "2. Build Layouts with CSS",
+        "content": "<h2>Shape the visual design</h2><p>Use CSS to control color, spacing, layout, and typography. Once you understand selectors and the box model, you can create attractive and readable page layouts.</p>",
+        "example": "<style>\nbody { font-family: sans-serif; color: #1d2b36; }\n.card { padding: 20px; background: #ecfdf5; border-radius: 10px; }\n</style>\n<div class=\"card\"><h2>My design</h2><p>Clean layout makes content easier to read.</p></div>"
+      },
+      {
+        "id": "responsive-design",
+        "title": "3. Make It Responsive",
+        "content": "<h2>Adapt to different screen sizes</h2><p>Responsive design ensures your pages look good on phones, tablets, and desktops. Use flexible layouts, media queries, and readable spacing to improve the user experience.</p><div class=\"lesson-callout\">A page should feel comfortable whether someone opens it on a laptop or a small phone screen.</div>",
+        "example": "<style>\n.cards { display: grid; grid-template-columns: 1fr; gap: 12px; }\n@media (min-width: 560px) { .cards { grid-template-columns: repeat(2, 1fr); } }\n</style>\n<div class=\"cards\"><article>Card one</article><article>Card two</article></div>"
+      },
+      {
+        "id": "javascript-basics",
+        "title": "4. Add Interactivity with JavaScript",
+        "content": "<h2>Teach the page to react</h2><p>JavaScript allows you to respond to clicks, gather input, and update the page dynamically. Learn variables, functions, conditions, arrays, and DOM changes to build interactive features.</p>",
+        "example": "<button id=\"demoBtn\" type=\"button\">Click me</button>\n<p id=\"demoText\">Ready to begin.</p>\n<script>\ndocument.getElementById('demoBtn').addEventListener('click', () => {\n  document.getElementById('demoText').textContent = 'The page is interactive!';\n});\n</script>"
+      },
+      {
+        "id": "git-workflow",
+        "title": "5. Learn Git and GitHub",
+        "content": "<h2>Track work and collaborate</h2><p>Use Git to save versions of your code and GitHub to share projects online. Branches, commits, and pull requests help you manage work as your confidence grows.</p>",
+        "example": "<pre>git init\ngit add .\ngit commit -m \"Create first version\"\ngit push origin main</pre>"
+      },
+      {
+        "id": "api-usage",
+        "title": "6. Connect to APIs",
+        "content": "<h2>Bring in real data</h2><p>APIs let your site request information from a server. Learn JSON, fetch requests, and error handling so your app can show live or dynamic content.</p>",
+        "example": "<script>\nfetch('/api/tutorials')\n  .then(res => res.json())\n  .then(data => console.log(data));\n</script>"
+      },
+      {
+        "id": "accessibility",
+        "title": "7. Build Accessible Pages",
+        "content": "<h2>Design for everyone</h2><p>Good frontend work includes accessibility. Make forms clear, use semantic HTML, support keyboard controls, and check color contrast so more people can use your site.</p>",
+        "example": "<label for=\"email\">Email</label>\n<input id=\"email\" type=\"email\" placeholder=\"you@example.com\">"
+      },
+      {
+        "id": "final-project",
+        "title": "8. Ship Your First Project",
+        "content": "<h2>Apply everything in context</h2><p>Combine your HTML, CSS, JavaScript, design, and accessibility skills in a small project. Then publish it and reflect on what you learned so the next project is even stronger.</p>",
+        "example": "<h1>Portfolio project</h1>\n<p>Home page, about section, contact form, and a polished landing screen.</p>"
+      }
+    ]
+  },
+  "project-challenges": {
+    "title": "Project Challenges",
+    "description": "Practice by building small front-end projects with real constraints.",
+    "lessons": [
+      {
+        "id": "challenge-landing-page",
+        "title": "Challenge 1: Build a Landing Page",
+        "content": "<h2>Create a strong first impression</h2><p>Design a simple landing page for a product, club, or personal brand. Include a headline, supporting text, call-to-action button, a feature list, and at least one image or graphic.</p><h3>Checklist</h3><ul><li>Clear section headings</li><li>Readable spacing</li><li>Responsive layout</li><li>Consistent color palette</li></ul>",
+        "example": "<header>\n  <h1>Start your next project</h1>\n  <p>Build, learn, and share your ideas.</p>\n  <button>Get started</button>\n</header>"
+      },
+      {
+        "id": "challenge-to-do",
+        "title": "Challenge 2: Build a To-Do App",
+        "content": "<h2>Practice interactivity</h2><p>Create a page where a user can add a task, mark it complete, and delete it. Use JavaScript to update the list whenever the user interacts with the page.</p><h3>Bonus</h3><p>Add local storage so the tasks stay after a refresh.</p>",
+        "example": "<form>\n  <input type=\"text\" placeholder=\"Add a task\">\n  <button>Add</button>\n</form>\n<ul><li>Review notes</li><li>Finish project</li></ul>"
+      },
+      {
+        "id": "challenge-dashboard",
+        "title": "Challenge 3: Build a Dashboard",
+        "content": "<h2>Organize information clearly</h2><p>Design a dashboard with a header, summary cards, and a content area that displays activity or metrics. Focus on layout, hierarchy, and visual balance.</p><h3>Constraints</h3><p>Use a grid-based layout and keep all content easy to scan.</p>",
+        "example": "<div class=\"dashboard\">\n  <aside>Navigation</aside>\n  <main>\n    <div class=\"stats\"><span>Visits: 520</span><span>Sales: $2k</span></div>\n  </main>\n</div>"
+      },
+      {
+        "id": "challenge-quiz-app",
+        "title": "Challenge 4: Build a Quiz App",
+        "content": "<h2>Test your JavaScript logic</h2><p>Make a small quiz with multiple-choice questions, a score counter, and a restart button. This helps practice conditions, arrays, loops, and user feedback.</p>",
+        "example": "<div class=\"quiz\">\n  <h2>Question 1</h2>\n  <button>Option A</button>\n  <button>Option B</button>\n  <button>Option C</button>\n</div>"
+      },
+      {
+        "id": "challenge-portfolio",
+        "title": "Challenge 5: Create a Portfolio",
+        "content": "<h2>Show your best work</h2><p>Build a small portfolio page with sections for your projects, skills, and contact details. It should feel polished, readable, and professional without being overly complicated.</p>",
+        "example": "<header>\n  <h1>Alex Carter</h1>\n  <p>Front-end developer</p>\n</header>\n<section>\n  <h2>Projects</h2>\n</section>"
+      }
+    ]
+  },
+  "quiz": {
+    "title": "Frontend Quick Quiz",
+    "description": "Short recap questions to test the basics of HTML, CSS, and JavaScript.",
+    "lessons": [
+      {
+        "id": "quiz-html",
+        "title": "HTML Quick Quiz",
+        "content": "<h2>Which tag creates a main heading?</h2><p>Pick the best answer.</p><ul><li>A. &lt;header&gt;</li><li>B. &lt;h1&gt;</li><li>C. &lt;div&gt;</li><li>D. &lt;strong&gt;</li></ul>",
+        "example": "<h1>Main heading</h1>"
+      },
+      {
+        "id": "quiz-css",
+        "title": "CSS Quick Quiz",
+        "content": "<h2>What CSS property changes the space between elements?</h2><p>Think about spacing and layout.</p><ul><li>A. color</li><li>B. margin</li><li>C. border-radius</li><li>D. font-size</li></ul>",
+        "example": "<style>\n.card { margin: 16px; }\n</style>"
+      },
+      {
+        "id": "quiz-js",
+        "title": "JavaScript Quick Quiz",
+        "content": "<h2>Which keyword should you use for a value that should not be reassigned?</h2><p>Choose the correct one.</p><ul><li>A. var</li><li>B. let</li><li>C. const</li><li>D. static</li></ul>",
+        "example": "<script>\nconst name = 'Ava';\n</script>"
+      }
+    ]
+  },
+  "sql": {
+    "title": "SQL Tutorial",
+    "description": "Learn to query, organize, and safely update relational data with SQL.",
+    "lessons": [
+      { "id": "sql-intro", "title": "1. What Is SQL?", "content": "<h2>Talk to relational databases</h2><p>SQL is a language for defining, reading, and changing data stored in tables. A table has named columns and rows of related values.</p>", "example": "CREATE TABLE books (id INTEGER, title TEXT);" },
+      { "id": "sql-select", "title": "2. Read Data with SELECT", "content": "<h2>Choose the columns you need</h2><p><code>SELECT</code> returns columns from a table. Use <code>*</code> for every column while exploring, then name columns explicitly in application queries.</p>", "example": "SELECT title, author FROM books;" },
+      { "id": "sql-where", "title": "3. Filter Rows with WHERE", "content": "<h2>Find matching records</h2><p><code>WHERE</code> filters rows using comparisons and logical operators. Text values are written in single quotes.</p>", "example": "SELECT title FROM books WHERE year >= 2020 AND genre = 'science';" },
+      { "id": "sql-order-limit", "title": "4. Sort and Limit Results", "content": "<h2>Control result order</h2><p><code>ORDER BY</code> sorts results; <code>DESC</code> reverses the default ascending order. <code>LIMIT</code> caps the number of returned rows.</p>", "example": "SELECT title, year FROM books ORDER BY year DESC LIMIT 10;" },
+      { "id": "sql-aggregates", "title": "5. Count and Summarize", "content": "<h2>Calculate across rows</h2><p>Aggregate functions such as <code>COUNT</code>, <code>SUM</code>, and <code>AVG</code> summarize many rows into a result.</p>", "example": "SELECT COUNT(*) AS book_count, AVG(year) AS average_year FROM books;" },
+      { "id": "sql-group-by", "title": "6. Group Results", "content": "<h2>Summarize each category</h2><p><code>GROUP BY</code> creates groups for aggregate calculations. Use <code>HAVING</code> to filter groups after aggregation.</p>", "example": "SELECT genre, COUNT(*) AS total FROM books GROUP BY genre HAVING COUNT(*) > 2;" },
+      { "id": "sql-joins", "title": "7. Combine Tables with JOIN", "content": "<h2>Connect related records</h2><p>A join matches rows across tables using related columns, commonly a primary key and a foreign key. An inner join returns only matching rows.</p>", "example": "SELECT books.title, authors.name FROM books JOIN authors ON books.author_id = authors.id;" },
+      { "id": "sql-subqueries", "title": "8. Use a Subquery", "content": "<h2>Use one query inside another</h2><p>A subquery can provide values to an outer query. Keep queries readable by giving calculated columns and tables clear names.</p>", "example": "SELECT title FROM books WHERE author_id IN (SELECT id FROM authors WHERE country = 'Canada');" },
+      { "id": "sql-insert", "title": "9. Add Rows with INSERT", "content": "<h2>Create new records</h2><p><code>INSERT INTO</code> names the destination columns and the values for one or more new rows. Explicit column lists help prevent mistakes.</p>", "example": "INSERT INTO books (title, author_id, year) VALUES ('River Stories', 3, 2024);" },
+      { "id": "sql-update", "title": "10. Change Rows with UPDATE", "content": "<h2>Update only intended records</h2><p><code>UPDATE</code> changes values in existing rows. Always check the <code>WHERE</code> condition first; without it, every row may be changed.</p>", "example": "UPDATE books SET year = 2025 WHERE id = 12;" },
+      { "id": "sql-delete", "title": "11. Remove Rows with DELETE", "content": "<h2>Delete carefully</h2><p><code>DELETE</code> removes matching rows. Preview the same condition with <code>SELECT</code> before deleting important data.</p>", "example": "DELETE FROM books WHERE id = 12;" },
+      { "id": "sql-constraints", "title": "12. Add Data Constraints", "content": "<h2>Protect data consistency</h2><p>Constraints enforce rules such as unique identifiers, required values, and valid relationships between tables.</p>", "example": "CREATE TABLE authors (id INTEGER PRIMARY KEY, name TEXT NOT NULL UNIQUE);" },
+      { "id": "sql-schema-index", "title": "13. Design Tables and Indexes", "content": "<h2>Structure data for reliable queries</h2><p>Choose columns that represent one fact each and use keys to identify records. Index columns used frequently for lookup, while remembering that indexes add storage and slow some writes.</p>", "example": "CREATE INDEX books_author_id_idx ON books (author_id);" },
+      { "id": "sql-transactions", "title": "14. Use Transactions", "content": "<h2>Keep related changes together</h2><p>A transaction groups multiple statements so they can succeed together or be rolled back. This is useful when one operation updates several related records.</p>", "example": "BEGIN; UPDATE accounts SET balance = balance - 25 WHERE id = 1; UPDATE accounts SET balance = balance + 25 WHERE id = 2; COMMIT;" },
+      { "id": "sql-safe-queries", "title": "15. Write Safe Queries", "content": "<h2>Keep user input separate from SQL</h2><p>Build application queries with parameterized statements instead of joining user input into SQL text. Parameters help prevent injection and handle values correctly.</p>", "example": "SELECT id, title FROM books WHERE author_id = ?;" }
+    ]
+  },
+  "express": {
+    "title": "Express.js Tutorial",
+    "description": "Build Node.js web servers and APIs with Express.",
+    "lessons": [
+      { "id": "express-intro", "title": "1. What Is Express?", "content": "<h2>A web framework for Node.js</h2><p>Express provides routing and middleware for HTTP servers. Start with a small application, then add features as your routes need them.</p>", "example": "const express = require('express');\nconst app = express();\napp.listen(3000);" },
+      { "id": "express-server", "title": "2. Start a Server", "content": "<h2>Listen for requests</h2><p>An Express app listens on a port and can send a response for each incoming request. Use an environment-provided port when deploying.</p>", "example": "const port = process.env.PORT || 3000;\napp.listen(port, () => console.log('Server ready'));" },
+      { "id": "express-routes", "title": "3. Define Routes", "content": "<h2>Match HTTP methods and paths</h2><p>Routes connect a method and URL path to a handler. Use <code>GET</code> for reading and choose other methods according to the change being made.</p>", "example": "app.get('/hello', (req, res) => {\n  res.send('Hello!');\n});" },
+      { "id": "express-params", "title": "4. Read Route Parameters", "content": "<h2>Capture values from a path</h2><p>Named route segments are available in <code>req.params</code>. Validate identifiers before using them to look up data.</p>", "example": "app.get('/users/:id', (req, res) => {\n  res.json({ userId: req.params.id });\n});" },
+      { "id": "express-query", "title": "5. Read Query Strings", "content": "<h2>Handle optional URL filters</h2><p>Query string values are available in <code>req.query</code>, such as search terms and pagination options. Treat them as untrusted input and validate their types and ranges.</p>", "example": "app.get('/search', (req, res) => {\n  res.json({ term: req.query.q || '' });\n});" },
+      { "id": "express-json", "title": "6. Parse JSON Requests", "content": "<h2>Accept JSON bodies</h2><p>Register <code>express.json()</code> before routes that read request bodies. Set sensible request-size limits for public APIs.</p>", "example": "app.use(express.json());\napp.post('/notes', (req, res) => {\n  res.status(201).json({ title: req.body.title });\n});" },
+      { "id": "express-middleware", "title": "7. Understand Middleware", "content": "<h2>Process requests in order</h2><p>Middleware can inspect or change a request, send a response, or call <code>next()</code> to continue. Register middleware before the routes that depend on it.</p>", "example": "app.use((req, res, next) => {\n  console.log(req.method, req.path);\n  next();\n});" },
+      { "id": "express-static", "title": "8. Serve Static Files", "content": "<h2>Make browser assets available</h2><p><code>express.static</code> serves files such as HTML, CSS, and images from a directory. Keep private files outside the public directory.</p>", "example": "const path = require('path');\napp.use(express.static(path.join(__dirname, 'public')));" },
+      { "id": "express-router", "title": "9. Organize Routes with Router", "content": "<h2>Keep route modules manageable</h2><p>An Express router groups related endpoints and can be mounted under a shared URL prefix. This keeps the main server file focused.</p>", "example": "const router = express.Router();\nrouter.get('/', (req, res) => res.json([]));\napp.use('/api/books', router);" },
+      { "id": "express-validation", "title": "10. Validate Request Data", "content": "<h2>Check data at the boundary</h2><p>Validate required fields, formats, and allowed values before using request data. Return a clear client error for invalid input instead of trusting the browser.</p>", "example": "if (typeof req.body.title !== 'string' || !req.body.title.trim()) {\n  return res.status(400).json({ error: 'A title is required.' });\n}" },
+      { "id": "express-errors", "title": "11. Handle Errors", "content": "<h2>Return consistent failures</h2><p>Pass asynchronous failures to error-handling middleware and keep error responses separate from internal stack traces. Register the error handler after routes.</p>", "example": "app.use((err, req, res, next) => {\n  console.error(err);\n  res.status(500).json({ error: 'Something went wrong.' });\n});" },
+      { "id": "express-async", "title": "12. Work with Async Handlers", "content": "<h2>Handle asynchronous work reliably</h2><p>Database and network operations are asynchronous. Make sure rejected promises reach your error handler rather than becoming unhandled errors.</p>", "example": "app.get('/books', async (req, res, next) => {\n  try {\n    res.json(await loadBooks());\n  } catch (error) {\n    next(error);\n  }\n});" },
+      { "id": "express-config", "title": "13. Configure an App", "content": "<h2>Keep environment-specific values outside code</h2><p>Read ports and secrets from environment variables. Do not commit credentials, and provide safe configuration for local development and deployment.</p>", "example": "const port = Number(process.env.PORT) || 3000;\nconst mode = process.env.NODE_ENV || 'development';" },
+      { "id": "express-security", "title": "14. Secure an Express App", "content": "<h2>Reduce common risks</h2><p>Use HTTPS in production, validate input, limit request sizes, and apply appropriate security headers and rate limits. Never expose private data in error messages.</p>", "example": "app.use(express.json({ limit: '100kb' }));\n// Add a maintained security-header middleware in production." },
+      { "id": "express-deploy", "title": "15. Test and Deploy", "content": "<h2>Prepare a dependable service</h2><p>Test routes for success and failure cases, log useful operational details, and make the server use the host-provided port. Confirm the start command works before deploying.</p>", "example": "if (require.main === module) {\n  app.listen(process.env.PORT || 3000);\n}\nmodule.exports = app;" }
+    ]
+  },
+  "react": {
+    "title": "React.js Tutorial",
+    "description": "Build interactive user interfaces with React components and state.",
+    "lessons": [
+      { "id": "react-intro", "title": "1. What Is React?", "content": "<h2>Build interfaces from components</h2><p>React lets you describe a user interface as reusable components. The UI updates when component data changes.</p>", "example": "function Welcome() {\n  return <h1>Welcome to React</h1>;\n}" },
+      { "id": "react-components", "title": "2. Create Components", "content": "<h2>Start with small pieces</h2><p>A component is a JavaScript function that returns UI. Component names begin with a capital letter and can be composed together.</p>", "example": "function Greeting() {\n  return <p>Hello, learner!</p>;\n}\n\nfunction App() {\n  return <Greeting />;\n}" },
+      { "id": "react-jsx", "title": "3. Write JSX", "content": "<h2>Describe markup in JavaScript</h2><p>JSX looks like HTML but is transformed by the build tool. Use braces to include JavaScript expressions and close every element.</p>", "example": "const name = 'Mina';\nconst heading = <h1>Hello, {name}</h1>;" },
+      { "id": "react-props", "title": "4. Pass Data with Props", "content": "<h2>Customize reusable components</h2><p>Props are inputs supplied by a parent component. Treat props as read-only and give components clear, descriptive prop names.</p>", "example": "function Greeting({ name }) {\n  return <p>Hello, {name}!</p>;\n}\n\n<Greeting name='Mina' />" },
+      { "id": "react-state", "title": "5. Store Changing Values with State", "content": "<h2>Let interactions update the UI</h2><p>The <code>useState</code> hook stores a value that can change over time. Call its setter to request a re-render instead of changing the value directly.</p>", "example": "const [count, setCount] = useState(0);\n\n<button onClick={() => setCount(count + 1)}>\n  Count: {count}\n</button>" },
+      { "id": "react-events", "title": "6. Respond to Events", "content": "<h2>Connect user actions to behavior</h2><p>Pass event handlers such as <code>onClick</code> as functions. Do not call the handler while rendering unless that is intentional.</p>", "example": "function SaveButton() {\n  function save() { console.log('Saved'); }\n  return <button onClick={save}>Save</button>;\n}" },
+      { "id": "react-lists", "title": "7. Render Lists with Keys", "content": "<h2>Turn arrays into UI</h2><p>Use <code>map</code> to render a collection. Give each item a stable key so React can track additions, removals, and reordering.</p>", "example": "const fruits = ['Apple', 'Pear', 'Plum'];\n\n<ul>{fruits.map(fruit => <li key={fruit}>{fruit}</li>)}</ul>" },
+      { "id": "react-conditional", "title": "8. Show UI Conditionally", "content": "<h2>Render the state that applies</h2><p>Use conditional expressions or early returns to show different content. Keep conditions readable, especially when the UI has multiple states.</p>", "example": "function Status({ isReady }) {\n  return isReady ? <p>Ready to go</p> : <p>Loading...</p>;\n}" },
+      { "id": "react-forms", "title": "9. Build Forms", "content": "<h2>Keep form values in sync</h2><p>A controlled input gets its value from state and updates it with an event handler. Associate labels with inputs for accessible forms.</p>", "example": "const [email, setEmail] = useState('');\n\n<label>Email <input value={email} onChange={event => setEmail(event.target.value)} /></label>" },
+      { "id": "react-effects", "title": "10. Synchronize with Effects", "content": "<h2>Use effects for external synchronization</h2><p><code>useEffect</code> is for synchronizing with systems outside rendering, such as browser APIs. Specify dependencies and clean up subscriptions or timers when needed.</p>", "example": "useEffect(() => {\n  document.title = 'My React page';\n}, []);" },
+      { "id": "react-data", "title": "11. Load Data", "content": "<h2>Represent loading, success, and error</h2><p>When fetching data, show clear loading and error states as well as the completed result. Avoid updating a component after the request is no longer relevant.</p>", "example": "const [status, setStatus] = useState('loading');\n\nuseEffect(() => {\n  fetch('/api/items').then(response => {\n    if (!response.ok) throw new Error('Request failed');\n    return response.json();\n  }).then(() => setStatus('ready')).catch(() => setStatus('error'));\n}, []);" },
+      { "id": "react-sharing-state", "title": "12. Share State Between Components", "content": "<h2>Lift state to a common parent</h2><p>If sibling components need the same changing value, keep that state in their closest shared parent and pass values and callbacks down as props.</p>", "example": "function Parent() {\n  const [selected, setSelected] = useState('');\n  return <Picker value={selected} onChange={setSelected} />;\n}" },
+      { "id": "react-context", "title": "13. Use Context for Shared Values", "content": "<h2>Avoid passing the same prop through many layers</h2><p>Context can provide values such as a theme to distant descendants. Use it for genuinely shared data, not as a replacement for every prop.</p>", "example": "const ThemeContext = createContext('light');\n\n<ThemeContext.Provider value='dark'>\n  <App />\n</ThemeContext.Provider>" },
+      { "id": "react-accessibility", "title": "14. Make Components Accessible", "content": "<h2>Use semantic browser controls</h2><p>Prefer native buttons, links, labels, and headings. Ensure keyboard users can operate interactive elements and that controls have understandable names.</p>", "example": "<label htmlFor='name'>Name</label>\n<input id='name' name='name' />\n<button type='button'>Save</button>" },
+      { "id": "react-project", "title": "15. Build and Review a React App", "content": "<h2>Combine components into a complete experience</h2><p>Break a page into focused components, handle empty and error states, and test important interactions. Use the project build command to catch issues before publishing.</p>", "example": "function App() {\n  return <main><h1>Reading list</h1><p>Add and track books you want to read.</p></main>;\n}" }
+    ]
+  },
+  "dart": {
+    "title": "Dart Tutorial",
+    "description": "Learn Dart syntax, types, collections, classes, and asynchronous programming.",
+    "lessons": [
+      { "id": "dart-intro", "title": "1. Meet Dart", "content": "<h2>A language for apps and more</h2><p>Dart is a typed programming language commonly used with Flutter. Dart programs start in a <code>main</code> function.</p>", "example": "void main() {\n  print('Hello, Dart!');\n}" },
+      { "id": "dart-variables", "title": "2. Variables and Types", "content": "<h2>Name and store values</h2><p>Use <code>var</code> when the type can be inferred, <code>final</code> for a value assigned once, and <code>const</code> for a compile-time constant.</p>", "example": "var city = 'Oslo';\nfinal year = 2026;\nconst pi = 3.14159;" },
+      { "id": "dart-types", "title": "3. Common Data Types", "content": "<h2>Work with typed values</h2><p>Dart includes types such as <code>int</code>, <code>double</code>, <code>String</code>, and <code>bool</code>. Types help tools catch mistakes before a program runs.</p>", "example": "int score = 42;\ndouble temperature = 18.5;\nString player = 'Ari';\nbool isReady = true;" },
+      { "id": "dart-operators", "title": "4. Operators and Expressions", "content": "<h2>Calculate and compare</h2><p>Arithmetic, comparison, and logical operators combine values into expressions. Use parentheses to make complex calculations clear.</p>", "example": "final subtotal = 12.50 + 7.50;\nfinal hasDiscount = subtotal >= 20 && true;" },
+      { "id": "dart-control-flow", "title": "5. Make Decisions and Repeat Work", "content": "<h2>Control the order of execution</h2><p>Use <code>if</code> and <code>switch</code> for decisions and loops to repeat work. Choose the loop that makes the stopping condition easy to understand.</p>", "example": "for (var i = 1; i <= 3; i++) {\n  print('Step $i');\n}" },
+      { "id": "dart-functions", "title": "6. Write Functions", "content": "<h2>Give reusable work a name</h2><p>Functions can accept typed parameters and return a value. Use named parameters when they make a call easier to understand.</p>", "example": "int add(int a, int b) => a + b;\n\nvoid main() {\n  print(add(2, 3));\n}" },
+      { "id": "dart-collections", "title": "7. Lists, Sets, and Maps", "content": "<h2>Store groups of values</h2><p>A list is ordered, a set stores unique values, and a map associates keys with values. Use collection methods to transform and inspect data.</p>", "example": "final colors = <String>['blue', 'gold'];\nfinal uniqueIds = <int>{1, 2, 3};\nfinal capitals = <String, String>{'Japan': 'Tokyo'};" },
+      { "id": "dart-null-safety", "title": "8. Understand Null Safety", "content": "<h2>Handle values that may be absent</h2><p>Dart types are non-nullable by default. Add <code>?</code> when a value may be null, and check or provide a fallback before using it.</p>", "example": "String? nickname;\nfinal displayName = nickname ?? 'Guest';\nprint(displayName);" },
+      { "id": "dart-classes", "title": "9. Create Classes and Objects", "content": "<h2>Model related data and behavior</h2><p>Classes define fields and methods; objects are instances of those classes. Keep each class focused on one clear responsibility.</p>", "example": "class Book {\n  final String title;\n  Book(this.title);\n}\n\nfinal book = Book('North Star');" },
+      { "id": "dart-constructors", "title": "10. Constructors and Initializers", "content": "<h2>Initialize objects consistently</h2><p>Constructors set up instances when they are created. Named constructors can describe different ways to create an object.</p>", "example": "class Point {\n  final int x;\n  final int y;\n  const Point({required this.x, required this.y});\n}" },
+      { "id": "dart-inheritance", "title": "11. Inheritance and Mixins", "content": "<h2>Reuse behavior thoughtfully</h2><p>Use inheritance when one type truly specializes another. Mixins can share behavior across classes without establishing a parent-child relationship.</p>", "example": "class Animal {\n  void speak() => print('Sound');\n}\n\nclass Dog extends Animal {\n  @override\n  void speak() => print('Woof');\n}" },
+      { "id": "dart-enums-generics", "title": "12. Enums and Generics", "content": "<h2>Represent fixed choices and reusable types</h2><p>Enums define a known set of options. Generics let classes and functions work with different types while preserving type checks.</p>", "example": "enum OrderStatus { pending, shipped, delivered }\n\nT first<T>(List<T> items) => items.first;" },
+      { "id": "dart-exceptions", "title": "13. Handle Exceptions", "content": "<h2>Respond to operations that fail</h2><p>Use exceptions for exceptional failures, and catch only where your program can recover or add useful context. Avoid hiding failures with empty fallback values.</p>", "example": "try {\n  final value = int.parse('42');\n  print(value);\n} on FormatException catch (error) {\n  print('Invalid number: $error');\n}" },
+      { "id": "dart-futures", "title": "14. Work Asynchronously with Futures", "content": "<h2>Wait for a result without blocking</h2><p>A <code>Future</code> represents a result that will be available later. Use <code>async</code> and <code>await</code> to write asynchronous code clearly.</p>", "example": "Future<String> loadMessage() async {\n  return 'Loaded';\n}\n\nvoid main() async {\n  print(await loadMessage());\n}" },
+      { "id": "dart-packages-testing", "title": "15. Packages and Tests", "content": "<h2>Use the Dart ecosystem</h2><p>Packages add reusable functionality through a project manifest. Write small tests for expected behavior and run the analyzer to catch issues early.</p>", "example": "import 'package:test/test.dart';\n\ntest('addition works', () {\n  expect(2 + 3, equals(5));\n});" }
+    ]
+  },
+  "flutter": {
+    "title": "Flutter Tutorial",
+    "description": "Build cross-platform apps with Flutter widgets and Dart.",
+    "lessons": [
+      { "id": "flutter-intro", "title": "1. What Is Flutter?", "content": "<h2>Create apps from a widget tree</h2><p>Flutter is a UI toolkit for building applications across multiple platforms. You compose screens from widgets written in Dart.</p>", "example": "void main() {\n  runApp(const MyApp());\n}" },
+      { "id": "flutter-project", "title": "2. Create a Flutter Project", "content": "<h2>Start with the Flutter tools</h2><p>Create a project with the Flutter SDK, then run it on a selected device or emulator. The generated starter app is a useful place to explore the project structure.</p>", "example": "flutter create hello_app\ncd hello_app\nflutter run" },
+      { "id": "flutter-widget-tree", "title": "3. Understand the Widget Tree", "content": "<h2>Compose the interface</h2><p>Widgets describe configuration for parts of the UI. Build a tree of small widgets so each part has a clear purpose.</p>", "example": "const Text('Hello, Flutter!');" },
+      { "id": "flutter-stateless", "title": "4. Build a Stateless Widget", "content": "<h2>Use immutable screen configuration</h2><p>A stateless widget is appropriate when its appearance depends only on its inputs. Override <code>build</code> to return its widget tree.</p>", "example": "class Greeting extends StatelessWidget {\n  const Greeting({super.key});\n\n  @override\n  Widget build(BuildContext context) => const Text('Welcome');\n}" },
+      { "id": "flutter-layout", "title": "5. Arrange Content with Layout Widgets", "content": "<h2>Control space and alignment</h2><p>Use widgets such as <code>Row</code>, <code>Column</code>, <code>Padding</code>, and <code>Expanded</code> to arrange children. Flutter layout is driven by constraints from parent to child.</p>", "example": "Row(\n  children: const [Icon(Icons.star), SizedBox(width: 8), Text('Featured')],\n);" },
+      { "id": "flutter-material", "title": "6. Build a Material App", "content": "<h2>Set up app-level structure</h2><p><code>MaterialApp</code> provides common Material Design features, while <code>Scaffold</code> supplies a standard page structure such as an app bar and body.</p>", "example": "MaterialApp(\n  home: Scaffold(\n    appBar: AppBar(title: const Text('My App')),\n    body: const Center(child: Text('Hello')),\n  ),\n);" },
+      { "id": "flutter-stateful", "title": "7. Manage Local State", "content": "<h2>Update a screen after interaction</h2><p>A stateful widget owns data that changes during its lifetime. Call <code>setState</code> when a change should rebuild that widget's UI.</p>", "example": "setState(() {\n  count++;\n});" },
+      { "id": "flutter-input", "title": "8. Handle User Input", "content": "<h2>Respond to taps and text</h2><p>Buttons expose callbacks for user actions, and text fields can use controllers or callbacks to read input. Dispose of controllers when their owning state is removed.</p>", "example": "ElevatedButton(\n  onPressed: () => print('Pressed'),\n  child: const Text('Continue'),\n);" },
+      { "id": "flutter-lists", "title": "9. Display Scrollable Lists", "content": "<h2>Build lists efficiently</h2><p>Use <code>ListView.builder</code> for longer or dynamic lists so items are created as they are needed. Provide stable keys when list items can change order.</p>", "example": "ListView.builder(\n  itemCount: items.length,\n  itemBuilder: (context, index) => ListTile(title: Text(items[index])),\n);" },
+      { "id": "flutter-navigation", "title": "10. Navigate Between Screens", "content": "<h2>Move through an app</h2><p>Navigation pushes a new route onto a stack and can return a result when that route is popped. Choose a navigation structure that fits the number of app sections.</p>", "example": "Navigator.of(context).push(\n  MaterialPageRoute(builder: (context) => const DetailsPage()),\n);" },
+      { "id": "flutter-forms", "title": "11. Validate Forms", "content": "<h2>Collect and validate user input</h2><p>A <code>Form</code> groups fields and can validate them before submission. Give fields clear labels and explain validation errors in a helpful way.</p>", "example": "final formKey = GlobalKey<FormState>();\n\nif (formKey.currentState!.validate()) {\n  // Submit validated values.\n}" },
+      { "id": "flutter-async", "title": "12. Load Asynchronous Data", "content": "<h2>Show progress while waiting</h2><p>Use a <code>Future</code> for one-time asynchronous work and represent loading, success, and error states in the UI.</p>", "example": "FutureBuilder<String>(\n  future: loadMessage(),\n  builder: (context, snapshot) {\n    if (snapshot.hasError) return const Text('Could not load data');\n    if (!snapshot.hasData) return const CircularProgressIndicator();\n    return Text(snapshot.data!);\n  },\n);" },
+      { "id": "flutter-theme-assets", "title": "13. Themes and Assets", "content": "<h2>Keep visuals consistent</h2><p>Define shared colors and component styles in the app theme. Declare image and font assets in the project configuration before loading them.</p>", "example": "MaterialApp(\n  theme: ThemeData(colorSchemeSeed: Colors.teal),\n  home: const HomePage(),\n);" },
+      { "id": "flutter-accessibility", "title": "14. Responsive and Accessible UI", "content": "<h2>Adapt to different people and screens</h2><p>Use flexible layouts that respond to available space, provide meaningful labels for controls, and ensure text remains readable at larger sizes.</p>", "example": "Semantics(\n  label: 'Add a new item',\n  button: true,\n  child: IconButton(onPressed: addItem, icon: const Icon(Icons.add)),\n);" },
+      { "id": "flutter-test-release", "title": "15. Test and Release an App", "content": "<h2>Check behavior before shipping</h2><p>Test important widget interactions, run static analysis, and verify the app on target devices. Create a release build using the instructions for each platform.</p>", "example": "flutter analyze\nflutter test\nflutter build" }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn HTML, CSS, and JavaScript with clear tutorials and an interactive code editor.">
+  <title>MySchool | Learn to build for the web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/learning.css">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="MySchool home"><span class="brand-mark">M</span><span>MySchool</span></a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a class="nav-active" href="/#courses">Tutorials</a>
+      <a href="/editor.html">Playground</a>
+    </nav>
+    <a class="header-cta" href="/#courses">Start learning <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> THE WEB, MADE MAKEABLE</p>
+        <h1>Learn to build.<br><span>One lesson at a time.</span></h1>
+        <p class="hero-description">Clear tutorials, real examples, and a place to try every idea. Start with the basics and make something of your own.</p>
+        <form id="courseSearchForm" class="course-search" role="search">
+          <label class="visually-hidden" for="courseSearch">Search tutorials</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="courseSearch" type="search" placeholder="What do you want to learn?" autocomplete="off">
+          <button type="submit" aria-label="Search tutorials">Search <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="hero-meta"><span>Free to learn</span><span>Learn by doing</span><span>No setup needed</span></div>
+      </div>
+      <div class="hero-demo" aria-label="Example code and browser preview">
+        <div class="demo-topbar"><span class="window-dots"><i></i><i></i><i></i></span><span>your-first-page.html</span><span class="demo-live"><i></i> LIVE</span></div>
+        <div class="demo-content">
+          <div class="demo-code" aria-hidden="true"><span class="code-muted">01</span> <span class="code-pink">&lt;h1&gt;</span><br><span class="code-muted">02</span> &nbsp;Hello, web.<br><span class="code-muted">03</span> <span class="code-pink">&lt;/h1&gt;</span><br><span class="code-muted">04</span><br><span class="code-muted">05</span> <span class="code-blue">&lt;p&gt;</span>Made by you.<span class="code-blue">&lt;/p&gt;</span></div>
+          <div class="demo-preview"><span class="preview-label">BROWSER PREVIEW</span><h2>Hello, web.</h2><p>Made by you.</p><span class="preview-cursor"></span></div>
+        </div>
+        <div class="demo-caption"><span class="caption-check">✓</span> Write a little code. See it come to life.</div>
+      </div>
+    </section>
+
+    <section class="course-section" id="courses">
+      <div class="section-heading">
+        <div><p class="eyebrow">PICK YOUR FIRST STEP</p><h2>Explore tutorials</h2></div>
+        <span id="courseCount" class="course-count" aria-live="polite">Loading courses…</span>
+      </div>
+      <div id="tutorials" class="course-grid" aria-live="polite">
+        <div class="loading-state"><span class="loading-dot"></span>Finding your next lesson…</div>
+      </div>
+      <p id="emptyCourses" class="empty-courses" hidden>No tutorials match that search. Try HTML, CSS, or JavaScript.</p>
+    </section>
+
+    <section class="course-section challenge-section" id="challenges">
+      <div class="section-heading">
+        <div><p class="eyebrow">PUT IT INTO PRACTICE</p><h2>Project challenges</h2></div>
+      </div>
+      <div id="challengeTracks" class="course-grid challenge-grid" aria-live="polite">
+        <div class="loading-state"><span class="loading-dot"></span>Loading challenge tracks…</div>
+      </div>
+    </section>
+
+    <section class="practice-band">
+      <div class="practice-icon" aria-hidden="true">&lt;/&gt;</div>
+      <div><p class="eyebrow">A SMALL IDEA IS ENOUGH</p><h2>Learn it. Then try it.</h2><p>Open the playground, change the code, and see what happens.</p></div>
+      <a class="practice-link" href="/editor.html">Open the playground <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="/"><span class="brand-mark">M</span><span>MySchool</span></a><span>Build your web skills, one idea at a time.</span><a href="/#courses">Browse tutorials ↑</a></footer>
+  <script src="/JS/main.js" defer></script>
+</body>
+</html>

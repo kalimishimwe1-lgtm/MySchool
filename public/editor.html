@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Write HTML, CSS, and JavaScript and see your changes in a live preview.">
+  <title>Code Playground | MySchool</title>
+  <link rel="stylesheet" href="/CSS/learning.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="MySchool home"><span class="brand-mark">M</span><span>MySchool</span></a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="/#courses">Tutorials</a>
+      <a class="nav-active" href="/editor.html">Playground</a>
+    </nav>
+    <a class="header-cta" href="/#courses">Browse courses <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="editor-page">
+    <div class="editor-heading">
+      <div><p class="eyebrow">MAKE A CHANGE, SEE WHAT HAPPENS</p><h1>Code playground</h1><p>Your code runs privately in the preview below.</p></div>
+      <div class="editor-tools"><button id="resetBtn" class="button-secondary" type="button">Reset example</button><button id="runBtn" class="button-primary" type="button">Run code <span aria-hidden="true">▶</span></button></div>
+    </div>
+    <div class="editor-grid">
+      <section class="editor-pane" aria-label="Code editor">
+        <div class="pane-heading"><span>HTML, CSS &amp; JavaScript</span><span class="pane-status">EDITABLE</span></div>
+        <textarea id="code" aria-label="Write HTML, CSS, and JavaScript" spellcheck="false"><!DOCTYPE html>
+<html>
+<body>
+<h1>Hello World</h1>
+<p>Edit me and press Run!</p>
+</body>
+</html></textarea>
+      </section>
+      <section class="editor-pane" aria-label="Live preview">
+        <div class="pane-heading"><span>Preview</span><span class="pane-status">LIVE OUTPUT</span></div>
+        <iframe id="preview" title="Code output preview" sandbox="allow-scripts"></iframe>
+      </section>
+    </div>
+    <p class="editor-hint">Run your changes with <kbd>Ctrl</kbd> + <kbd>Enter</kbd>.</p>
+  </main>
+
+  <script src="/JS/editor.js" defer></script>
+</body>
+</html>
