@@ -1,6 +1,21 @@
 const express = require('express');
 const path = require('path');
 const tutorials = require('./data/Tutorials.json');
+const lessonExpansions = require('./data/LessonExpansions.json');
+
+for (const [slug, lessons] of Object.entries(lessonExpansions)) {
+  const tutorial = tutorials[slug];
+  if (!tutorial) throw new Error(`Lesson expansion references unknown tutorial: ${slug}`);
+
+  const lessonIds = new Set(tutorial.lessons.map(lesson => lesson.id));
+  for (const lesson of lessons) {
+    if (lessonIds.has(lesson.id)) {
+      throw new Error(`Duplicate lesson id "${lesson.id}" in tutorial "${slug}"`);
+    }
+    lessonIds.add(lesson.id);
+  }
+  tutorial.lessons.push(...lessons);
+}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
